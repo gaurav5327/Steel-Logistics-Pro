@@ -39,21 +39,24 @@ const Register = () => {
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full mb-4 p-3 border rounded focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="w-full mb-4 p-3 border border-gray-300 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+          autoComplete="name"
         />
         <input
           type="email"
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full mb-4 p-3 border rounded focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="w-full mb-4 p-3 border border-gray-300 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+          autoComplete="email"
         />
         <input
           type="password"
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="w-full mb-4 p-3 border rounded focus:outline-none focus:ring-2 focus:ring-green-400"
+          className="w-full mb-4 p-3 border border-gray-300 rounded bg-white text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-400 focus:border-transparent"
+          autoComplete="new-password"
         />
         <button className="w-full bg-green-600 text-white p-3 rounded hover:bg-green-700 transition">
           Register

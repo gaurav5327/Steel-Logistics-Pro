@@ -112,3 +112,28 @@ html, body {
     min-width: 100%;
   }
 }
+
+/* Fix autofill styles for inputs */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+  -webkit-text-fill-color: #111827 !important;
+  box-shadow: 0 0 0 30px white inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Ensure input text is always visible */
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"] {
+  background-color: white !important;
+  color: #111827 !important;
+}
+
+input::placeholder {
+  color: #6b7280 !important;
+  opacity: 1;
+}
