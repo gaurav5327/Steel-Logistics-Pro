@@ -26,7 +26,7 @@ const WhatIfAnalysis = () => {
       const capacityImpact = (scenario.portCapacityChange / 100) * baselineCost * 0.1;
       const fuelImpact = (scenario.fuelCostChange / 100) * baselineCost * 0.15;
       const railwayImpact = ((100 - scenario.railwayAvailability) / 100) * baselineCost * 0.05;
-      
+
       const totalCostChange = delayImpact + capacityImpact + fuelImpact + railwayImpact;
       const newTotalCost = baselineCost + totalCostChange;
       const percentageChange = ((newTotalCost - baselineCost) / baselineCost) * 100;
@@ -43,7 +43,7 @@ const WhatIfAnalysis = () => {
           railwayImpact
         }
       });
-      
+
       toast.success('What-if analysis completed!');
     } catch (error) {
       toast.error('Analysis failed');
@@ -71,7 +71,7 @@ const WhatIfAnalysis = () => {
             {/* Scenario Configuration */}
             <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg">
               <h2 className="text-2xl font-bold text-gray-800 mb-6">Scenario Parameters</h2>
-              
+
               <div className="space-y-6">
                 {/* Vessel Delay */}
                 <div>
@@ -82,7 +82,7 @@ const WhatIfAnalysis = () => {
                     type="number"
                     value={scenario.vesselDelay}
                     onChange={(e) => handleScenarioChange('vesselDelay', e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     step="0.5"
                     min="0"
                     max="30"
@@ -99,7 +99,7 @@ const WhatIfAnalysis = () => {
                     type="number"
                     value={scenario.portCapacityChange}
                     onChange={(e) => handleScenarioChange('portCapacityChange', e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     step="5"
                     min="-50"
                     max="100"
@@ -116,7 +116,7 @@ const WhatIfAnalysis = () => {
                     type="number"
                     value={scenario.fuelCostChange}
                     onChange={(e) => handleScenarioChange('fuelCostChange', e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     step="5"
                     min="-30"
                     max="100"
@@ -133,7 +133,7 @@ const WhatIfAnalysis = () => {
                     type="number"
                     value={scenario.demurrageRate}
                     onChange={(e) => handleScenarioChange('demurrageRate', e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     step="500"
                     min="1000"
                     max="20000"
@@ -150,7 +150,7 @@ const WhatIfAnalysis = () => {
                     type="number"
                     value={scenario.railwayAvailability}
                     onChange={(e) => handleScenarioChange('railwayAvailability', e.target.value)}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     step="5"
                     min="0"
                     max="100"
@@ -171,7 +171,7 @@ const WhatIfAnalysis = () => {
             {/* Results */}
             <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg">
               <h2 className="text-2xl font-bold text-gray-800 mb-6">Analysis Results</h2>
-              
+
               {results ? (
                 <div className="space-y-6">
                   {/* Cost Summary */}

@@ -73,8 +73,8 @@ const Optimization = () => {
                   AI-powered least-cost port-plant dispatch optimization with operational constraints
                 </p>
               </div>
-              <Link 
-                to="/what-if-analysis" 
+              <Link
+                to="/what-if-analysis"
                 className="bg-green-600 text-white px-6 py-3 rounded-xl hover:bg-green-700 transition duration-300 font-medium mt-4 md:mt-0"
               >
                 What-If Analysis
@@ -87,7 +87,7 @@ const Optimization = () => {
             <div className="lg:col-span-1">
               <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg">
                 <h2 className="text-2xl font-bold text-gray-800 mb-6">Optimization Parameters</h2>
-                
+
                 <div className="space-y-6">
                   {/* Material Type */}
                   <div>
@@ -97,7 +97,7 @@ const Optimization = () => {
                     <select
                       value={optimizationParams.materialType}
                       onChange={(e) => handleParamChange('materialType', e.target.value)}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="coking_coal">Coking Coal</option>
                       <option value="limestone">Limestone</option>
@@ -114,7 +114,7 @@ const Optimization = () => {
                     <select
                       value={optimizationParams.priorityMode}
                       onChange={(e) => handleParamChange('priorityMode', e.target.value)}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="cost">Minimize Total Cost</option>
                       <option value="time">Minimize Transit Time</option>
@@ -132,7 +132,7 @@ const Optimization = () => {
                       type="number"
                       value={optimizationParams.maxPortCalls}
                       onChange={(e) => handleParamChange('maxPortCalls', parseInt(e.target.value))}
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       min="1"
                       max="5"
                     />
@@ -143,7 +143,7 @@ const Optimization = () => {
                     <label className="block text-sm font-medium text-gray-700">
                       Operational Constraints
                     </label>
-                    
+
                     <div className="flex items-center">
                       <input
                         type="checkbox"
@@ -181,7 +181,7 @@ const Optimization = () => {
                       value={optimizationParams.vesselId}
                       onChange={(e) => handleParamChange('vesselId', e.target.value)}
                       placeholder="e.g., MV-STEEL-001"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
 
@@ -194,7 +194,7 @@ const Optimization = () => {
                       value={optimizationParams.plantIds}
                       onChange={(e) => handleParamChange('plantIds', e.target.value)}
                       placeholder="e.g., DUR, BOK, ROU"
-                      className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full p-3 border border-gray-300 rounded-lg bg-white text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
 
